@@ -1,0 +1,71 @@
+.ekart--products--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px; /* Add negative margin to compensate for padding in child elements */
+  }
+  
+ 
+  .ekart--product--item {
+    width: calc(33.33% - 30px); 
+    margin: 15px; 
+    box-sizing: border-box;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+    
+  }
+
+  .ekart--product--item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .ekart--product--image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  
+  .ekart--product--details {
+    padding: 15px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .ekart--product--item {
+      width: calc(50% - 30px); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ekart--product--item {
+      width: 100%; 
+    }
+    .ekart--products--container{
+        text-align: center;
+        padding: auto;
+
+    }
+    .ekart--add--to--price{
+        display: inline-block; 
+  padding: 10px;
+  border: 2px solid #ffcc00; 
+  background-color: #ffffcc; 
+  border-radius: 5px; 
+  font-weight: bold; 
+    }
+    .ekart-on-sale-tag {
+      display: inline-block;
+      padding: 8px; 
+      border: 2px solid #ff0000; 
+      background-color: #ffcccc; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      color: #ff0000; 
+    }
+
+  }
