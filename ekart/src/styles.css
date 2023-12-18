@@ -12,28 +12,18 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
-.ekart-on-sale-tag {
-    display: inline-block;
-    padding: 8px; 
-    border: 2px solid #ff0000; 
-    background-color: #ffedcc; 
-    border-radius: 5px; 
-    font-weight: bold; 
-    color: #ff0000; 
-  }
-  .ekart--add--to--price{
 
-    display:inline-block;
-    padding: auto;
-    background-color:white;
-    font-weight: bold;
-    border: radius 5px;
-    border: 2px black;
-    border-inline: 2px;
-  }
 
-  .gap-between-line{
-   
-    line-height: 2;
 
-  }
+
+.ekart--add--to--price{
+  text-align: center;
+  padding:1px 5px;
+  position:absolute;
+  margin-top: -25px;
+  background-color:#28282B;
+  color:white;
+  text-align: center;
+} 
+
+

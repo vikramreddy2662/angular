@@ -9,6 +9,8 @@ import { containerComponent } from './container/container.component';
 import { SearchComponent } from './container/search/search.component';
 import { FormsModule, NgModel } from '@angular/forms';
 import { ProductListComponent } from './container/product-list/product-list.component';
+import { ProductComponent } from './container/product-list/product/product.component';
+
 
 
 
@@ -20,7 +22,10 @@ import { ProductListComponent } from './container/product-list/product-list.comp
     TopHeaderComponent,
     containerComponent,
     SearchComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductComponent
+
+
  
 
   ],
@@ -28,6 +33,8 @@ import { ProductListComponent } from './container/product-list/product-list.comp
     BrowserModule,
     AppRoutingModule,
     FormsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
