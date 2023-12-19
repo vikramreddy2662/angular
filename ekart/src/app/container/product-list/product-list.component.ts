@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'product-list',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+
+
   products = [
     {
       id: 1,
@@ -17,7 +19,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Blue", "Black"],
       price: 160,
-      discountPrice:140,
+      discountPrice: 140,
       is_in_inventory: true,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
@@ -63,7 +65,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", , "Brown", "Red"],
       price: 180,
-      discountPrice:140,
+      discountPrice: 140,
       is_in_inventory: false,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
@@ -109,8 +111,8 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Brown", "Red", "Black"],
       price: 80,
-      discountPrice:60,
-      is_in_inventory:false,
+      discountPrice: 60,
+      is_in_inventory: false,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/whegph8z9ornhxklc8rp/phantom-venom-academy-fg-firm-ground-soccer-cleat-6JVNll.jpg",
       slug: "nike-phantom-venom-academy-fg"
@@ -125,7 +127,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10, 11, 12],
       color: ["White", "Blue", "Black"],
       price: 145,
-      discountPrice:125,
+      discountPrice: 125,
       is_in_inventory: false,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/vhbwnkor8sxt8qtecgia/mercurial-vapor-13-elite-tech-craft-fg-firm-ground-soccer-cleat-l38JPj.jpg",
@@ -156,8 +158,8 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Blue", "Black"],
       price: 90,
-      discountPrice:70,
-      is_in_inventory:false,
+      discountPrice: 70,
+      is_in_inventory: false,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/178b2a46-3ee4-492b-882e-f71efdd53a36/air-force-1-big-kids-shoe-2zqp8D.jpg",
       slug: "nike-air-force-1"
@@ -172,7 +174,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9],
       color: ["White", "Blue", "Black"],
       price: 100,
-      discountPrice:75,
+      discountPrice: 75,
       is_in_inventory: true,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8439f823-86cf-4086-81d2-4f9ff9a66866/air-max-90-big-kids-shoe-1wzwJM.jpg",
@@ -208,7 +210,7 @@ export class ProductListComponent {
       imageURL: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/33888130-0320-41a1-ba53-a026decd8aa2/joyride-dual-run-big-kids-running-shoe-1HDJF8.jpg",
       slug: "nike-joyride-dual-run"
     },
-    
+
     {
       id: 14,
       name: "Nizza X Disney",
@@ -234,7 +236,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9],
       color: ["White", "Blue", "Black", "Brown", "Red"],
       price: 65,
-      discountPrice:45,
+      discountPrice: 45,
       is_in_inventory: true,
       items_left: 5,
       imageURL: "https://assets.adidas.com/images/h_320,f_auto,q_auto:sensitive,fl_lossy/a36518227134495da766ab9d01772fa2_9366/X_PLR_Shoes_Red_FY9063_01_standard.jpg",
@@ -265,13 +267,13 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10],
       color: ["White", "Blue", "Black", "Brown", "Red"],
       price: 120,
-      discountPrice:105,
+      discountPrice: 105,
       is_in_inventory: true,
       items_left: 3,
       imageURL: "https://assets.adidas.com/images/h_320,f_auto,q_auto:sensitive,fl_lossy/99ca762cb9054caf82fbabc500fd146e_9366/NMD_R1_Shoes_Blue_FY9392_01_standard.jpg",
       slug: "nmd_r1"
     },
-    
+
     {
       id: 18,
       name: "Superstar",
@@ -282,7 +284,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9, 10, 11, 12],
       color: ["White", "Blue", "Black"],
       price: 90,
-      discountPrice:80,
+      discountPrice: 80,
       is_in_inventory: true,
       items_left: 3,
       imageURL: "https://assets.adidas.com/images/h_320,f_auto,q_auto:sensitive,fl_lossy/12365dbc7c424288b7cdab4900dc7099_9366/Superstar_Shoes_White_FW3553_FW3553_01_standard.jpg",
@@ -313,7 +315,7 @@ export class ProductListComponent {
       size: [6, 7, 8, 9],
       color: ["White", "Blue", "Black", "Red"],
       price: 60,
-      discountPrice:25,
+      discountPrice: 25,
       is_in_inventory: true,
       items_left: 3,
       imageURL: "https://images.vans.com/is/image/Vans/UUK24I-HERO?$583x583$",
@@ -350,19 +352,19 @@ export class ProductListComponent {
       slug: "HMTr-feburary-sk8-hi"
     },
     {
-    id: 23,
-    name: "Fossil",
-    description: "DAY AND DATE WORKING Analog Watch - For Men 7088-SILVER",
-    brand: "Fossil",
-    gender: "MEN",
-    category: "CASUAL",
-    size: [],
-    color: ["White", "Blue", "Black", "Brown", "Red"],
-    price: 97223,
-    is_in_inventory: true,
-    items_left: 5,
-    imageURL: "https://rukminim2.flixcart.com/image/612/612/jve4pe80/watch-refurbished/h/p/2/c-ch2599-fossil-original-imaffesvujnhfh85.jpeg?q=70",
-    slug: "HMTr-feburary-sk8-hi"
+      id: 23,
+      name: "Fossil",
+      description: "DAY AND DATE WORKING Analog Watch - For Men 7088-SILVER",
+      brand: "Fossil",
+      gender: "MEN",
+      category: "CASUAL",
+      size: [],
+      color: ["White", "Blue", "Black", "Brown", "Red"],
+      price: 923,
+      is_in_inventory: true,
+      items_left: 5,
+      imageURL: "https://rukminim2.flixcart.com/image/612/612/jve4pe80/watch-refurbished/h/p/2/c-ch2599-fossil-original-imaffesvujnhfh85.jpeg?q=70",
+      slug: "HMTr-feburary-sk8-hi"
     },
     {
       id: 24,
@@ -373,27 +375,37 @@ export class ProductListComponent {
       category: "CASUAL",
       size: [],
       color: ["White", "Blue", "Black", "Brown", "Red"],
-      price: 3223,
+      price: 523,
       is_in_inventory: true,
       items_left: 5,
       imageURL: "https://rukminim2.flixcart.com/image/612/612/xif0q/watch/v/2/i/1-nf9197-gg-naviforce-men-original-imagrf3ehrzbvdgr.jpeg?q=70",
       slug: "HMTr-feburary-sk8-hi"
-      }
-      
-    
-  ];
- 
-    totalProductCount=this.products.length;
-    totalProductInStock=this.products.filter(p=>p.is_in_inventory===true).length;
-    totalProductOutOfStock=this.products.filter(z=>z.is_in_inventory===false).length;
-
-    selectedFilterRadioButton:string="all";
-
-    onFilterRadioButtonChanged(value:string){
-     // console.log(value);
-    this.selectedFilterRadioButton=value;
-
-          
     }
+
+
+  ];
+
+  totalProductCount = this.products.length;
+  totalProductInStock = this.products.filter(p => p.is_in_inventory === true).length;
+  totalProductOutOfStock = this.products.filter(z => z.is_in_inventory === false).length;
+
+
+
+  @Input()
+  searchText:string="";
+
+
+
+  selectedFilterRadioButton: string = "all";
+
+  onFilterRadioButtonChanged(value: string) {
+    // console.log(value);
+    this.selectedFilterRadioButton = value;
+
+
+  }
+   
+ 
+
 
 }

@@ -13,6 +13,9 @@
     <span>{{addToCart}}</span>
     <button (click)="getIncrement()"> + </button> --> 
    
-    
-
+    <app-search (SearchTextEvent)="onTextChange($event)"></app-search>
+    <product-list [searchText]="searchText"></product-list>  
+ 
 </div>
+
+

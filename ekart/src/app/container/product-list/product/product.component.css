@@ -1,12 +1,11 @@
 :host {
     position: relative;
-    width: calc(33.33% - 20px); /* Adjust the width and account for padding */
+    width: calc(33.33% - 20px); 
     box-sizing: border-box;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-    text-align: center; /* Center the content horizontally */
-    overflow: hidden; /* Ensure the content doesn't overflow when enlarged */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-}
+    margin-bottom: 20px; 
+    text-align: center; 
+    overflow: hidden; 
+    transition: transform 0.3s ease; }
 
 
 .ekart--product--item {
@@ -46,16 +45,24 @@
     color: #28282B;
     font-weight: bold;
 }
-:host:hover {
+.ekart--product--image {
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .ekart--product--image:hover {
     transform: scale(1.1); 
-}
+  }
+
+  
+
 .ekart--add--to--wishlist {
     position: absolute;
     top: 0;
     left: 0;
     padding: 5px;
     font-size: 20px;
-    color: #ff0000; 
+    color: #ff0000;
+    z-index: 1; 
 }
     #v{
         padding-right: 25px;
