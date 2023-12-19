@@ -10,6 +10,7 @@ import { SearchComponent } from './container/search/search.component';
 import { FormsModule, NgModel } from '@angular/forms';
 import { ProductListComponent } from './container/product-list/product-list.component';
 import { ProductComponent } from './container/product-list/product/product.component';
+import { FilterComponent } from './container/product-list/filter/filter.component';
 
 
 
@@ -23,7 +24,8 @@ import { ProductComponent } from './container/product-list/product/product.compo
     containerComponent,
     SearchComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    FilterComponent
 
 
  

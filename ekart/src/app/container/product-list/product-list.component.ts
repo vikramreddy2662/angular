@@ -110,7 +110,7 @@ export class ProductListComponent {
       color: ["White", "Brown", "Red", "Black"],
       price: 80,
       discountPrice:60,
-      is_in_inventory: true,
+      is_in_inventory:false,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/whegph8z9ornhxklc8rp/phantom-venom-academy-fg-firm-ground-soccer-cleat-6JVNll.jpg",
       slug: "nike-phantom-venom-academy-fg"
@@ -157,7 +157,7 @@ export class ProductListComponent {
       color: ["White", "Blue", "Black"],
       price: 90,
       discountPrice:70,
-      is_in_inventory: true,
+      is_in_inventory:false,
       items_left: 3,
       imageURL: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/178b2a46-3ee4-492b-882e-f71efdd53a36/air-force-1-big-kids-shoe-2zqp8D.jpg",
       slug: "nike-air-force-1"
@@ -382,6 +382,18 @@ export class ProductListComponent {
       
     
   ];
+ 
+    totalProductCount=this.products.length;
+    totalProductInStock=this.products.filter(p=>p.is_in_inventory===true).length;
+    totalProductOutOfStock=this.products.filter(z=>z.is_in_inventory===false).length;
 
+    selectedFilterRadioButton:string="all";
+
+    onFilterRadioButtonChanged(value:string){
+     // console.log(value);
+    this.selectedFilterRadioButton=value;
+
+          
+    }
 
 }
