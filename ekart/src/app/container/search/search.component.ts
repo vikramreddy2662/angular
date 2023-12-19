@@ -21,9 +21,14 @@ onSearchTextEvent()
 this.SearchTextEvent.emit(this.searchText);
 }
 
-updateSearchText(event : any){
+updateSearchText(InputElement : HTMLInputElement){
 
-this.searchText=event.target.value;
+//this.searchText=event.target.value;
+//console.log(InputElement);
+this.searchText=InputElement.value;
+this.SearchTextEvent.emit(InputElement.value);
+
+
 
 }
 
