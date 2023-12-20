@@ -11,11 +11,12 @@
     <!-- <p>name:{{name}}</p> -->
     <!-- <button (click)="getDecrement()"> - </button>
     <span>{{addToCart}}</span>
-    <button (click)="getIncrement()"> + </button> --> 
-   
+    <button (click)="getIncrement()"> + </button> -->
+
     <app-search (SearchTextEvent)="onTextChange($event)"></app-search>
-    <product-list [searchText]="searchText"></product-list>  
- 
+
+    <product-list [searchText]="searchText" #productListComponent></product-list>
+
+    <product-detail *ngIf="productListComponent.selectedProduct"  [productListCompo]="productListComponent"></product-detail>
+
 </div>
-
-
