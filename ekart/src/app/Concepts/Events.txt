@@ -39,3 +39,5 @@ Events related to touch interactions, like (touchstart), (touchmove), (touchend)
 Window and Document Events:
 
 Events related to the window and document, such as (window:resize), (document:keydown), etc.
+
+Events
