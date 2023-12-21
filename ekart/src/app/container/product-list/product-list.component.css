@@ -1,14 +1,7 @@
-.ekart--products--container {
-  margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* or 'space-between' for equal space between items */
-  padding: 0px 20px; /* Adjust the padding as needed */
+.ekart--products--container{
+    margin: 20px auto;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0px 17vh;
 }
 
-/* Ensure each product has a width of approximately one-third of the container */
-app-product {
-  width: calc(33.33% - 20px); /* Adjust the width and account for padding */
-  box-sizing: border-box;
-  margin-bottom: 20px; /* Adjust the margin as needed */
-}

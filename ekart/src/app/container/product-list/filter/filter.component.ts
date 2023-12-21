@@ -1,4 +1,4 @@
-import { Component, Input,EventEmitter, Output } from '@angular/core';
+import { Component,Input,EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -6,29 +6,23 @@ import { Component, Input,EventEmitter, Output } from '@angular/core';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent {
+     @Input()
+     all:number=0;
 
-  @Input()
-  all:number=0;
+     @Input()
+     inStock:number=0;
 
-  @Input()
-  inStock:number=0;
-  @Input()
-  outOfStock:number=0
+     @Input()
+     outOfStock:number=0;
 
 
+     @Output()
+     selectedFilterRadioButtonChanged:EventEmitter<string> = new EventEmitter<string>();
 
-  @Output()
+     selectedFilterRadioButton:string='all';  
 
-  SelectedFilterRadioButtonChanged: EventEmitter<string> =new EventEmitter<string>();
-
-     selectedFilterRadioButton:string='true';
-
-   onSelectedFilterRadioButton() {
-
-    //console.log(this.selectedFilterRadioButton);
-
-    this.SelectedFilterRadioButtonChanged.emit(this.selectedFilterRadioButton);
-  }
+     onSelectedFilterRadioButtonChanged(){
+      this.selectedFilterRadioButtonChanged.emit(this.selectedFilterRadioButton);
+     }
 
 }
-
