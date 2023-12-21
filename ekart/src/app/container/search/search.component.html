@@ -1,32 +1,8 @@
 <div class="ekart--search--product">
-    <!-- <input class="ekart-search-product-input" (input)="updateSearchText($event)"> -->
-    <!-- #searchInput->template reference variable -->
-    
-    <input class="ekart-search-product-input" #searchInput >
-    <!-- [ngClass]="{'btn':true, 'btn-search':searchText,'btn-search-disabled':!searchText}" [disabled]="!searchText -->
-    <button class="btn btn-search" (click)="updateSearchText()" >Search</button>
-
-
-<div class="ekart-search-result-for">
-    <p id="v" *ngIf="searchText!= '' "><strong>search result for:</strong>{{searchText}}</p>
-   
-    <product-list [searchText]="searchText"></product-list>
-    
+    <input class="ekart-search-product-input" #searchInput>
+    <button class="btn btn-search" (click)="updateSearchText()">Search</button>
 </div>
+<div class="ekart-search-result-for"><p *ngIf="searchText != ''"><strong>Search result for:</strong> {{ searchText }}</p></div>
 
 
-
-
-
-
-<!-- <div *ngFor="let item of items">
-    <p>Current element in the Array:{{item}}</p>
-</div> -->
-
-<!-- <div *ngFor="let type of types">
-
-    <a href="#">{{type}}</a> -->
-
-
-
-
+<!-- [ngClass]="{'btn':true,'btn-search':searchText,'.btn-search-disabled':!searchText}" [disabled]="!searchText" --> 
