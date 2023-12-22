@@ -16,4 +16,6 @@ export class AppComponent {
    onBtnClicked(inputEl:HTMLInputElement){
     this.inputVal=inputEl.value;
    }
+
+   
 }
