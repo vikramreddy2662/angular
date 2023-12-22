@@ -1,0 +1,8 @@
+component created
+
+ng Onchanges=>runs only when component class is created and input property values are updated.
+ngOnInit=>runs before all the view->child,children and content child,children are available so they cannot be used
+=>it's called  only once after input properties changes and after it won't change again and again.
+
+
+component destroyed
