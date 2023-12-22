@@ -1,5 +1,5 @@
 
-import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild, ElementRef, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
@@ -7,7 +7,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild, ElementR
   styleUrls: ['./demo.component.css']
 })
 
-export class DemoComponent implements OnChanges, OnInit {
+export class DemoComponent implements OnChanges, OnInit ,DoCheck{
   title: string = 'Demo Component';
   //@Input() message: string[];
   @Input() message: string;
@@ -31,6 +31,9 @@ export class DemoComponent implements OnChanges, OnInit {
     /*console.log(this.tempelement.nativeElement.innerHTML);=>ngOnInit is called before  view child ,view children,projection content 
     child content children decorators are rendered or created so we cannot use any property decorated with view child decorator*/
 
+  }
+  ngDoCheck() {
+    console.log("ng doCheck life cycle is called");
   }
 
 
