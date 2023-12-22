@@ -16,6 +16,10 @@ export class AppComponent {
    onBtnClicked(inputEl:HTMLInputElement){
     this.inputVal=inputEl.value;
    }
+   ngAfterViewInit(){
 
-   
+    console.log("ngAfterViewInit lifeCycle Hook is called");
+   // console.log(this.tempelement.nativeElement);
+  
+   }
 }

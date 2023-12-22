@@ -9,7 +9,8 @@ import { Component,
    DoCheck ,
    AfterContentInit,
   ContentChild,
-  AfterContentChecked
+  AfterContentChecked,
+  AfterViewInit
 
 
         } from '@angular/core';
@@ -20,7 +21,8 @@ import { Component,
   styleUrls: ['./demo.component.css']
 })
 
-export class DemoComponent implements OnChanges, OnInit ,DoCheck,AfterContentInit,AfterContentChecked{
+export class DemoComponent implements OnChanges, OnInit ,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit
+{
   title: string = 'Demo Component';
   //@Input() message: string[];
   @Input() message: string;
@@ -62,7 +64,8 @@ export class DemoComponent implements OnChanges, OnInit ,DoCheck,AfterContentIni
  child component class  is fully intialized
  =>properties decorated with contentChild contentChildren are called just before ngcontentAfterInit method is called
  do they are undefined before ngaftercontentinit 
- =>it runs only once like ngonit and it runs after the ngDocheck*/
+ =>it runs only once like ngonit and it runs after the ngDocheck
+ =>it's called only after all the processes are finished and all the before methods are called*/
 
   }
 
@@ -70,8 +73,32 @@ export class DemoComponent implements OnChanges, OnInit ,DoCheck,AfterContentIni
 
     console.log('ngAfterContentChecked  life cycle hook is called');
     console.log(this.paraEl.nativeElement);
+  /*
+  ngAfterContentChecked life cycle hook is called after the projected Content is created,intialized,updated.
+  
+  it's same as like as do check but this hook is called  after the projected content is intialized.
 
-  }
+  it's called for every CDLC run. no matter whether the projected content is updated or not.
+
+  the properties decorarted using content child and content children decoraters are also assigned to projected content 
+  in ngAfterContentChecked method */
+
+}
+ngAfterViewInit(){
+
+  console.log("ngAfterViewInit lifeCycle Hook is called");
+  console.log(this.tempelement.nativeElement);
+
+
+/*ngAfterViewInit method  is called only after the template of it's component and view templates of it's child class components are fully
+intialized
+=>view child and view children decorators are just intialized before this method.
+=>just like ngInit and ngAfterInit. ngAfterViewInit hook method also get called only once after the first run of CDLC */
+
+}
+
+
+
 
 }
 
