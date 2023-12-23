@@ -16,6 +16,8 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { isNgContainer } from '@angular/compiler';
 import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
+import { setbackground } from './CustomDirectives/setbackground';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FeaturedBrandsComponent } from './container/featured-brands/featured-br
     ProductComponent,
     FilterComponent,
     ProductDetailComponent,
-    FeaturedBrandsComponent
+    FeaturedBrandsComponent,
+    setbackground
+  
   ],
   imports: [
     BrowserModule,
