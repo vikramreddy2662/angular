@@ -10,7 +10,9 @@ import { Component,
    AfterContentInit,
   ContentChild,
   AfterContentChecked,
-  AfterViewInit
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy
 
 
         } from '@angular/core';
@@ -21,7 +23,7 @@ import { Component,
   styleUrls: ['./demo.component.css']
 })
 
-export class DemoComponent implements OnChanges, OnInit ,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit
+export class DemoComponent implements OnChanges, OnInit ,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy
 {
   title: string = 'Demo Component';
   //@Input() message: string[];
@@ -93,7 +95,26 @@ ngAfterViewInit(){
 /*ngAfterViewInit method  is called only after the template of it's component and view templates of it's child class components are fully
 intialized
 =>view child and view children decorators are just intialized before this method.
-=>just like ngInit and ngAfterInit. ngAfterViewInit hook method also get called only once after the first run of CDLC */
+=>just like ngInit and ngAfterInit. ngAfterViewInit hook method also get called only once after the first run of CDLC 
+=>it's called after all the lifecycle hooks of it's child component is executed  */
+
+}
+ngAfterViewChecked(){
+
+  console.log("ngAfterViewChecked hook is called");
+  console.log(this.tempelement.nativeElement.textContent);
+
+
+  /*ngAfterViewChecked is called after the ngAfterViewInit it runs at the very first when the component is created and after 
+  for every CDLC run
+  =>the properties updated using view child and view children decorator are rendered on the webpage as it runs for every CDLC RUN
+  no  matter whether the change is detected by CDLC  ngAfterViewChecked is run for every CDLC run */
+
+}
+
+ngOnDestroy(){
+
+console.log("ngOnDestroy Method lifecycle  hook is called");
 
 }
 

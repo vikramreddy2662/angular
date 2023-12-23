@@ -4,5 +4,38 @@ ng Onchanges=>runs only when component class is created and input property value
 ngOnInit=>runs before all the view->child,children and content child,children are available so they cannot be used
 =>it's called  only once after input properties changes and after it won't change again and again.
 
+ngDoCheck=>called before the content is projected and the properties decorated   with (view,content)=>child and children 
+decorators are called.
+
+ngAfterContentInit=>called after ngDoCheck properties decorated with content child and children decorators are intialized just before
+this method gets called.
+
+ngAfterContentDoCheck=>called after the ngDoCheck method gets called after the projected content is fully injected and fully intialized
+we can add the updated projected content 
+ we can compare data before and updated with the projected content 
+
+ ngAfterViewInit=>
+ called after the ng ngAfterViewInit ,VIEW=>child and children decorated properties are intialized. 
+ **called only after the template of a component class and it's child class templates are fully intialized.
+
+ ngAterViewChecked=>
+ called after the ngAfterViewInit VIEW=>child and children decorated properties are updated and rendered 
+
+ ngAfterViewInit and ngAfterViewChecked properties are called only after all the lifecycle methods in it's child component are called.
+
+ngOnDestroy=>
+
+ngOnDestroy method is called just before the component is destroyed 
+it's the last method of the conponent lifecycle.
+it's the best method to perform some clean up operations.
 
 component destroyed
+
+****
+Among the all angular life cycle hook methods 
+ngAfterContentInit
+ngAfterContentChecked
+ngAterViewChecked
+ngAfterViewInit
+
+these methods are only applicable for components but not for directives

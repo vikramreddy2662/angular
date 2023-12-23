@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Lifecycle-Hook';
   inputVal:string='';
+  todestroy:boolean=false;
+ 
+
   constructor(){
     console.log('App component constructor called');
    }
@@ -16,10 +19,23 @@ export class AppComponent {
    onBtnClicked(inputEl:HTMLInputElement){
     this.inputVal=inputEl.value;
    }
-   ngAfterViewInit(){
+
+   /*ngAfterViewInit(){
 
     console.log("ngAfterViewInit lifeCycle Hook is called");
    // console.log(this.tempelement.nativeElement);
   
    }
+
+   ngAfterViewChecked(){
+    console.log('ngAfetrVeiwChecked Hook is Called'); 
+   }*/
+
+   onDestroyBtn(){
+  
+    this.todestroy=!this.todestroy
+    
+ 
+   }
+   
 }
