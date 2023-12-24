@@ -1,5 +1,5 @@
 //Custom Attribute Directive
-import { Directive, ElementRef,OnInit } from "@angular/core"
+import { Directive, ElementRef,OnInit, Renderer2 } from "@angular/core"
 
 
 @Directive({
@@ -8,9 +8,11 @@ import { Directive, ElementRef,OnInit } from "@angular/core"
 export class setbackground implements OnInit{
 
    // private element:ElementRef
+   //private renderer:Renderer2
 
-constructor( private element:ElementRef){
+constructor( private element:ElementRef, private renderer:Renderer2){
 //this.element=element;
+this.renderer=renderer;
 //this.element.nativeElement.style.backgroundColor="red";
 //element.nativeElement.style.backgroundColor="yellow";
 
@@ -18,17 +20,16 @@ constructor( private element:ElementRef){
 }
 ngOnInit(){
 
-    this.element.nativeElement.style.backgroundColor="green";
-    this.element.nativeElement.style.textColor="black";
+    // this.element.nativeElement.style.backgroundColor="green";
+    // this.element.nativeElement.style.textColor="black";
+    
+    this.renderer.setStyle(this.element.nativeElement ,'backgroundColor','green');
+    this.renderer.setStyle(this.element.nativeElement ,'Color','black');
+    this.renderer.setAttribute(this.element.nativeElement ,'title','Latest Brands');
 
 }
 
-/*Custom Directive is a user defined directive 
-Using this directive we can add user defined styles  to single dom element and multiple dom elements unlike a normal attribute directive 
-where we can add only a style to single dom element
-=>using slector of this component as an attribute in dom element 
-=>this component class gets intialized and it's constructor gets called and after reference of that particular dom element is passed as an 
-instance to the property element and using that property element we can add styling to dom element */
+
 
 
 }

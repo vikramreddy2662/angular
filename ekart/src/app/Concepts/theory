@@ -1,0 +1,15 @@
+*Custom Directive is a user defined directive 
+Using this directive we can add user defined styles  to single dom element and multiple dom elements unlike a normal attribute directive 
+where we can add only a style to single dom element
+=>using slector of this component as an attribute in dom element 
+=>this component class gets intialized and it's constructor gets called and after reference of that particular dom element is passed as an 
+instance to the property element and using that property element we can add styling to dom element */
+
+rederer 2 class is an abstract or  a bridge between DOM and component code
+
+In professional we should not manipulate the data directly using like custom directive and reference elements
+ so using renderer we can set perform many operations on the dom elements but no directly
+ we can add styliing to the data and add attributes child elements set values and we can perform many operations to the dom elements.
+
+Host Listener listens to events on the host element(div element on which custom attribute directive is applied)\
+ and excutes the event handlers(methods which executes the events to which event handler listens).

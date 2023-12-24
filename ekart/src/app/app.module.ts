@@ -17,6 +17,8 @@ import { ProductDetailComponent } from './container/product-detail/product-detai
 import { isNgContainer } from '@angular/compiler';
 import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
 import { setbackground } from './CustomDirectives/setbackground';
+import { HighlightDirective } from './CustomDirectives/highlight.directive';
+import { AppHoverDirective } from './CustomDirectives/app-hoverDirective';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { setbackground } from './CustomDirectives/setbackground';
     FilterComponent,
     ProductDetailComponent,
     FeaturedBrandsComponent,
-    setbackground
+    setbackground,
+    HighlightDirective,
+    AppHoverDirective
   
   ],
   imports: [
