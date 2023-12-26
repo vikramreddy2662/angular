@@ -19,7 +19,7 @@ export class AppHoverDirective {
 
         this.backgroundColor = 'white';
         this.textColor = '#28282B';
-        this.border = '1px solid  #28282B'
+        this.border = '1px solid  #28282B'  
     }
 
 
