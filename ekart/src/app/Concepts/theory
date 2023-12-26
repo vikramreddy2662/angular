@@ -13,3 +13,10 @@ In professional we should not manipulate the data directly using like custom dir
 
 Host Listener listens to events on the host element(div element on which custom attribute directive is applied)\
  and excutes the event handlers(methods which executes the events to which event handler listens).
+
+
+ HostBinding is used to bind the properties of reference element of a DOM(properties of DOM on which directive class selector is used)
+ with the properties of Directive class or a component class.
+
+ =>using @HostBinding decorator we can bind the properties in Directive class with Properties of a Dom element and modifications ,
+ styles to the properties in the dom element.

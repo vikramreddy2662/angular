@@ -1,5 +1,5 @@
 //Custom Attribute Directive
-import { Directive, ElementRef,OnInit, Renderer2 } from "@angular/core"
+import { Directive, ElementRef,Input,OnInit, Renderer2 } from "@angular/core"
 
 
 @Directive({
@@ -7,7 +7,16 @@ import { Directive, ElementRef,OnInit, Renderer2 } from "@angular/core"
 })
 export class setbackground implements OnInit{
 
-   // private element:ElementRef
+    // @Input('setbackground') backColor:string="green"
+
+    // @Input() textColor:string="white";
+
+
+  @Input('setbackground') changeColor:{backColor:string,textColor:string};
+
+
+
+    // private element:ElementRef
    //private renderer:Renderer2
 
 constructor( private element:ElementRef, private renderer:Renderer2){
@@ -23,8 +32,12 @@ ngOnInit(){
     // this.element.nativeElement.style.backgroundColor="green";
     // this.element.nativeElement.style.textColor="black";
     
-    this.renderer.setStyle(this.element.nativeElement ,'backgroundColor','green');
-    this.renderer.setStyle(this.element.nativeElement ,'Color','black');
+    //this.renderer.setStyle(this.element.nativeElement ,'backgroundColor',this.backColor);
+    //this.renderer.setStyle(this.element.nativeElement ,'Color',this.textColor);
+    //this.renderer.setAttribute(this.element.nativeElement ,'title','Latest Brands');
+
+    this.renderer.setStyle(this.element.nativeElement ,'backgroundColor',this.changeColor.backColor);
+    this.renderer.setStyle(this.element.nativeElement ,'Color',this.changeColor.textColor);
     this.renderer.setAttribute(this.element.nativeElement ,'title','Latest Brands');
 
 }
