@@ -42,7 +42,8 @@ ngOnInit(){
 
 }
 
-
-
-
+/*using input decorator and property binding we can dynamically add values to the properties of the host element properties 
+by binding the properties  in the directive class with the Host Element. */
 }
+
+
